@@ -13,7 +13,7 @@ public class WindEngine{
 
         {
           double backXVelocity = (state.getBall().getxVelocity());
-          state.getBall().setxVelocity((backXVelocity - .01));
+          state.getBall().setxVelocity((backXVelocity - .018));
         }
      }
   }
