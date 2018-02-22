@@ -16,11 +16,6 @@ public class CollisionEngine{
        double reverseYVelocity = -(state.getBall().getyVelocity());
        state.getBall().setyVelocity((reverseYVelocity*.80));
         }
-
-
      }
-
-
-
 
     }

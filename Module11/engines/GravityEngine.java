@@ -9,5 +9,6 @@ public class GravityEngine {
     public void updateState(GameModel state) {
         double oldYVelocity = state.getBall().getyVelocity();
         state.getBall().setyVelocity(oldYVelocity - .1);
+
     }
 }

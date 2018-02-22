@@ -12,11 +12,15 @@ public class GameEngine {
     private GravityEngine gravityEngine = new GravityEngine();
     private MovementEngine movementEngine = new MovementEngine();
     private CollisionEngine collisionEngine = new CollisionEngine();
+    private WindEngine windEngine = new WindEngine();
     public void updateState(GameModel state, String input) {
         gravityEngine.updateState(state);
         updateFromUserInput(state, input);
+        windEngine.updateState(state);
         movementEngine.updateState(state);
         collisionEngine.updateState(state);
+
+
     }
 
     private void updateFromUserInput(GameModel state, String input) {
