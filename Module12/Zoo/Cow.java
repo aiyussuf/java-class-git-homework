@@ -13,7 +13,7 @@ public class Cow extends Animal{
     return sound;
   }
   public static void main(String args[]){
-    Cow beefy = new Cow("beefy", "White", 1200.0);
+    Cow beefy = new Cow("beefy", "Black", 1200.0);
     System.out.println("Name: " + beefy.getName());
     System.out.println("Sound: " + beefy.getSound());
     System.out.println("Color: " + beefy.getColor());
