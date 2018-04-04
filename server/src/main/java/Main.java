@@ -91,7 +91,6 @@ public class Main {
 
       Student studentToDelete = school.getStudentById(id);
       DeleteStudentRequest deletes = fromJson(request.body(), DeleteStudentRequest.class);
-      //studentToDelete = new Student(deletes.firstName, deletes.lastName);
       school.deleteStudent(studentToDelete);
       String json = toJson(studentToDelete);
 
