@@ -75,11 +75,30 @@ public class Main {
       int id = Integer.parseInt(request.params(":id"));
       UpdateGradeRequest update = fromJson(request.body(), UpdateGradeRequest.class);
       // TODO Finish implementing this endpoint.
+      Student gradeToUpdate = school.getStudentById(id);
+      gradeToUpdate.setGrade(update.grade);
+      String json = toJson(gradeToUpdate);
 
-      return "";
+      return json;
     });
 
     // TODO Implement the DELETE /api/students/{id} endpoint here.
+
+   delete("/api/students/:id", (request, response) -> {
+    response.type("application/json");
+
+      int id = Integer.parseInt(request.params(":id"));
+
+      Student studentToDelete = school.getStudentById(id);
+      DeleteStudentRequest deletes = fromJson(request.body(), DeleteStudentRequest.class);
+      //studentToDelete = new Student(deletes.firstName, deletes.lastName);
+      school.deleteStudent(studentToDelete);
+      String json = toJson(studentToDelete);
+
+      return json;
+
+    });
+
   }
 
   public static void main(String[] args) {
@@ -113,4 +132,4 @@ public class Main {
     Gson gson = new Gson();
     return gson.fromJson(json, klass);
   }
-}
+  }

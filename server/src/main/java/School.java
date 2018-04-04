@@ -27,4 +27,8 @@ public class School {
   public void addStudent(Student p) {
     this.students.add(p);
   }
+  public void deleteStudent(Student p) {
+    this.students.remove(p);
+  }
+
 }

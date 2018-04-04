@@ -19,6 +19,9 @@ public class Student {
   public int getId() {
     return this.id;
   }
+  public int getGrade() {
+    return this.grade;
+  }
 
   public void assignId() {
     this.id = getNextId();
@@ -30,5 +33,8 @@ public class Student {
 
   public void setLastName(String newLastName) {
     this.lastName = newLastName;
+  }
+  public void setGrade(int grade) {
+    this.grade = grade;
   }
 }
