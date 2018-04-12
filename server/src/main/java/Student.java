@@ -34,7 +34,14 @@ public class Student {
   public void setLastName(String newLastName) {
     this.lastName = newLastName;
   }
-  public void setGrade(int grade) {
-    this.grade = grade;
+
+  public void setGrade(int grade) throws Exception
+  {
+    if (grade < 0 || grade > 100) {
+    throw new Exception();
+    }
+     this.grade = grade;
+  };
+
+
   }
-}

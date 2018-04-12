@@ -1,3 +1,4 @@
+
 import static spark.Spark.*;
 
 import com.google.gson.Gson;
@@ -73,10 +74,18 @@ public class Main {
       response.type("application/json");
 
       int id = Integer.parseInt(request.params(":id"));
-      UpdateGradeRequest update = fromJson(request.body(), UpdateGradeRequest.class);
+
       // TODO Finish implementing this endpoint.
       Student gradeToUpdate = school.getStudentById(id);
+
+      try{
+
+
+      UpdateGradeRequest update = fromJson(request.body(), UpdateGradeRequest.class);
       gradeToUpdate.setGrade(update.grade);
+
+      }catch (Exception e) {gradeToUpdate.setGrade(0);}
+
       String json = toJson(gradeToUpdate);
 
       return json;
