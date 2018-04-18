@@ -27,9 +27,11 @@ public class Operands {
 
   public static void main(String[] args) {
     Operands operation = new Operands(4.0,5.0);
+    operation.executBinaryOperation("addition", (double x, double y) -> x + y);
     DoubleBinaryOperator add = (double x, double y) -> x + y;
 		System.out.println( "Addition: " + add.applyAsDouble( 4.0, 5.0));
 
+    operation.executBinaryOperation("multiplication", (double x, double y) -> x * y);
     DoubleBinaryOperator multiply = (double x, double y) -> x * y;
 		System.out.println( "Multiplication: " + multiply.applyAsDouble( 4.0, 5.0));
 
