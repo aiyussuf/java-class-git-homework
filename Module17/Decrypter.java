@@ -1,3 +1,3 @@
 public interface Decrypter {
-    String decrypt(String input);
+    String decrypt(byte[] input);
 }
