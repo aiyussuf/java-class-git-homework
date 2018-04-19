@@ -1,7 +1,3 @@
-/*
-Using the file EncryptionExcercise write the functional interfaces that will satisfy the encrypter and decrypter lambda expression definitions.
-*/
-
 public class EncryptionExercise {
     public static void main(String[] args) {
         DecryptedString original = new DecryptedString("Secret message of unbelievable importance");
@@ -20,13 +16,5 @@ public class EncryptionExercise {
         DecryptedString decrypted = encrypted.decrypt(decrypter);
 
         System.out.println(decrypted.getUnencryted());
-    }
-
-    private static char[] reverse(char[] chars) {
-        char[] reversed = new char[chars.length];
-        for(int i = 0; i < chars.length; i++) {
-            reversed[chars.length - 1 - i] = chars[i];
-        }
-        return reversed;
     }
 }
