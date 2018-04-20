@@ -1,3 +1,3 @@
 public interface Encrypter {
-    String encrypt(String input);
+    byte[] encrypt(String input);
 }
