@@ -15,7 +15,6 @@ public class Operands {
         this.operand2 = operand2;
     }
 
-
     public double executBinaryOperation(String operationName, DoubleBinaryOperator operation) {
         double answer = operation.applyAsDouble(operand1, operand2);
         System.out.println("Executing " + operationName + " on " + operand1
@@ -23,17 +22,10 @@ public class Operands {
         return answer;
     }
 
-
   public static void main(String[] args) {
     Operands operation = new Operands(4.0,5.0);
     operation.executBinaryOperation("addition", ( x, y) -> x + y);
-    DoubleBinaryOperator add = (x, y) -> x + y;
-		System.out.println( "Addition: " + add.applyAsDouble( 4.0, 5.0));
-
     operation.executBinaryOperation("multiplication", (x, y) -> x * y);
-    DoubleBinaryOperator multiply = (x, y) -> x * y;
-		System.out.println( "Multiplication: " + multiply.applyAsDouble( 4.0, 5.0));
-
 
     }
 }
